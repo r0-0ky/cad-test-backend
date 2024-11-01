@@ -8,7 +8,7 @@ const port = 3030
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'http://localhost:3001',
+    'http://cutletka.ru:2300',
   ],
   credentials: true,
 };
