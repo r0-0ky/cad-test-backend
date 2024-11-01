@@ -16,6 +16,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(Helmet());
 app.use(express.json());
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello world!')
+})
+
 app.post('/data', (req: Request, res: Response) => {
   res.send(`Thank you for your interest, ${req.body.name}`)
 })
