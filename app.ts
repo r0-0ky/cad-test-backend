@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import cors from 'cors';
-import helmet from "helmet";
+import Helmet from "helmet";
 
 const app = express()
 const port = 3030
@@ -14,7 +14,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use(helmet());
+app.use(Helmet());
 app.use(express.json());
 app.post('/data', (req: Request, res: Response) => {
   res.send(`Thank you for your interest, ${req.body.name}`)
